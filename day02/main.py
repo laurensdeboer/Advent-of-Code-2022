@@ -37,27 +37,9 @@ def partTwo():
     return totalScore
 
 def main():
-    answer = partTwo()
-    print(answer)
+    answerPartOne = partOne()
+    answerPartTwo = partTwo()
+    print(f"Part 1 answer: {answerPartOne}\nPart 2 answer: {answerPartTwo}")
 
 if __name__ == '__main__':
     main()
-
-# X = Lose
-# Y = Draw
-# Z = Win
-
-# A Y     
-# Opponent chooses ROCK
-# It must become DRAW
-# You must choose ROCK
-
-# B X
-# Opponent chooses PAPER
-# You must LOSE
-# You must chooose ROCK
-
-# C Z
-# Opponent chooses SCISSORS 
-# You must WIN
-# You must choose ROCK

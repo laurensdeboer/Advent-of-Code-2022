@@ -17,9 +17,22 @@ def partOne() -> int:
 
     return prioritySum
 
+def partTwo() -> int:
+    with open("input.txt") as file:
+        rucksacks = file.read().strip().split('\n')
+
+    prioritySum = 0
+    for i in range(0, len(rucksacks), 3):
+        commonItem = set(rucksacks[i]) & set(rucksacks[i + 1]) & set(rucksacks[i + 2])
+        prioritySum += getPriority(commonItem.pop())
+
+    return prioritySum
+
 def main():
     answerPartOne = partOne()
     print(f"Part 1 answer: {answerPartOne}")
+    answerPartTwo = partTwo()
+    print(f"Part 2 answer: {answerPartTwo}")
 
 if __name__ == '__main__':
     main()
